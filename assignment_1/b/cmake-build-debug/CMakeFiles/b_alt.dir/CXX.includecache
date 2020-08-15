@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/tolli/Documents/program/cpp/IINI4003/assignment_1/b/main.cpp
+iostream
+-
+cstdlib
+-
+fstream
+-
+
