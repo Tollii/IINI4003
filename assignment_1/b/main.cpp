@@ -8,7 +8,6 @@ void read_temperatures(double temperatures[], int length);
 
 int main(int argc, char *argv[]) {
 
-
     int length = 8;
 
     int higher = 0;
@@ -16,8 +15,6 @@ int main(int argc, char *argv[]) {
     int lower = 0;
 
     double temperatures[length];
-
-    cout << "reading temps" << endl;
     read_temperatures(temperatures, length);
 
     for (const double &temp : temperatures) {
@@ -39,7 +36,6 @@ int main(int argc, char *argv[]) {
 
 void read_temperatures(double temperatures[], int length) {
 
-
     const char filename[] = "../temp.txt";
     ifstream file;
     file.open(filename);
@@ -57,5 +53,4 @@ void read_temperatures(double temperatures[], int length) {
     }
     cout << "Closing file..." << endl;
     file.close();
-
 }
