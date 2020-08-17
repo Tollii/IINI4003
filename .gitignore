@@ -1,7 +1,7 @@
 .DS_Store
 .vscode
 .idea
-
+*.tar.gz
 
 
 # Created by https://www.toptal.com/developers/gitignore/api/c++
