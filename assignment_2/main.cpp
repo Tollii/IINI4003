@@ -2,6 +2,9 @@
 
 using namespace std;
 
+int find_sum(const int *table, int length);
+
+
 int main() {
 
     // 1a -------------------
@@ -58,6 +61,29 @@ int main() {
     *pointer = 3.0;
     cout << "num " << number << endl; // 3.0
 
+
+
+    // Opgave 6 -----------
+    cout << endl << "Oppgave 6 ---" << endl;
+
+    int length = 20;
+
+    int table[length];
+
+    for (size_t x = 0; x < length; x++) {
+        table[x] = length - x;
+    }
+
+
+    int sum = find_sum(&table[0], 10); // 10 første
+    cout << "Sum: " << sum << endl;
+
+    sum = find_sum(&table[10], 5); // 5 neste
+    cout << "Sum: " << sum << endl;
+
+    sum = find_sum(&table[length - 5], 5); // 5 siste
+    cout << "Sum: " << sum << endl;
+
     return 0;
 }
 
@@ -75,3 +101,13 @@ int main() {
  * Loopen stopper aldri hvis tegnet i search_for ikke er i tabellen. Da leser loopen bare minneadressene videre
  */
 
+
+int find_sum(const int *table, int length) {
+
+    int sum = 0;
+    for (size_t i = 0; i < length; i++) {
+        sum += table[i];
+    }
+
+    return sum;
+}
